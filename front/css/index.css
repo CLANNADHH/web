@@ -12,7 +12,34 @@ header h1 a:hover{ text-decoration:underline}
 header p{margin:17px 0 0 0;text-shadow:#fff 1px 1px 1px;}
 figure{ width:100%; background:#4398B2; clear:both; height:28px; position:fixed; z-index:9999}
 figure p{width:1000px;margin:0 auto; color:#FFF; line-height:28px;}
+.register {
+float: left;
+width: 30px;
+height: 27px;
+color:whitesmoke;
+/*background: url(../images/nav_sprite.png) 0px -21px no-repeat;*/
+}
+.register:hover{
+    color:green;
+}
+.login {
+float: left;
+width: 30px;
+height: 27px;
+color:whitesmoke;
+/*background: url(../images/nav_sprite.png) 0px -21px no-repeat;*/
+}
+.login:hover{
+    color:green;
+}
+
 .emails {
+float: right;
+width: 30px;
+height: 27px;
+background: url(../images/nav_sprite.png) 0px -21px no-repeat;
+}
+.li {
 float: right;
 width: 30px;
 height: 27px;
