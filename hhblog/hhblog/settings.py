@@ -141,7 +141,16 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+# CORS
+CORS_ORIGIN_WHITELIST = (
+    '127.0.0.1:8080',
+    'localhost:8080',
+    'www.clannadhh.club:8080',
+    'api.clannadhh.club:8000',
+    'www.clannadhh.club',  # 添加
+)
+CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
+CORS_ORIGIN_ALLOW_ALL= True # 添加
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 

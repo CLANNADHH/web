@@ -29,11 +29,11 @@ $(function () {
 function UpdateBlogListData() {
     $.ajax({
         type:"get",
-        url:"http://127.0.0.1:8000/blog/list",
+        url:"http://api.clannadhh.club:8000/blog/list",
         contentType: "application/json",
-        headers: {
-            "X-CSRFToken": getCookie("csrf_token")
-        },
+        // headers: {
+        //     "X-CSRFToken": getCookie("csrf_token")
+        // },
     })
     .done(function(data){
         if (data != null) {
@@ -64,11 +64,11 @@ function GetBlogData(pk) {
     $.ajax({
 
         type:"get",
-        url:"http://127.0.0.1:8000/blog/"+pk,
+        url:"http://api.clannadhh.club:8000/blog/"+pk,
         contentType: "application/json",
-        headers: {
-            "X-CSRFToken": getCookie("csrf_token")
-        },
+        // headers: {
+        //     "X-CSRFToken": getCookie("csrf_token")
+        // },
     })
     .done(function(data){
         if (data != null) {
