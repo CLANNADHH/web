@@ -67,6 +67,35 @@ background: url(../images/nav_sprite.png) 0px -68px no-repeat;
 .lace_hd_ft{ background:url(../images/lace_hd_ft.png) 0 -30px no-repeat; clear:both; height:150px; width:1000px; margin:auto}
 article{width:1000px; margin:auto; overflow:auto;}
 /*content*/
+#editor{ width:720px; float:left; padding-left:40px; display: none}
+.editor_in{background:#E5F3F7; border-radius:10px; margin-bottom:15px;padding:40px;}
+
+input{
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.vip_name{
+    background:#fff;
+    margin-left:20px;
+    margin-right:20px;
+}
+.input_sub:hover{
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+
+
 .blog{ width:720px; float:left; padding-left:40px}
 .blog h2{ font-size:14px; background:url(../images/import.gif) no-repeat 0 7px; padding: 0 0 0 20px; line-height:30px}
 .blog h2 a{ color:#333;-webkit-transition:all 1s;-moz-transition:all 1s;-o-transition:all 1s;-ms-transition:all 1s}
@@ -75,7 +104,7 @@ article{width:1000px; margin:auto; overflow:auto;}
 .blog h3 p{ background:#259CC7; width:180px; height:25px;  line-height:25px; height:25px; color:#fff; text-align:center; box-shadow: #999 4px 5px 1px;}
 .blog h3 p span{ font-family: 'La Belle Aurore', cursive; padding-left:10px}
 .bloglist{background:#E5F3F7; padding:20px;border-radius:10px; margin-bottom:15px; }
-.topimg img{ width:250px; clear:left; float:left; margin-right:10px}
+.topimg img{ max-width:120px; clear:left; float:left; margin-right:10px}
 .content p{ margin:0 0 10px 0; line-height:1.6}
 .read{ width:100%; margin:10px 0; padding:10px 0; text-align:right;}
 .read a{ background:#69CBE8; color:#FFF; padding:5px; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; }
@@ -92,3 +121,16 @@ aside ul li a{ color: #333; -webkit-transition: all 0.5s; -moz-transition: all 0
 aside ul li a:hover{ padding-left:20px }
 /* footer */
 #copright{line-height:50px; height:50px; text-align:center; width:100%;color:#fff;text-shadow:#06C 1px 1px 1px;}
+
+.release_form .form-group{
+    width:700px;
+    overflow:hidden;
+    margin:15px auto;
+}
+.release_form h3
+{
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #9698a5;
+    border-bottom:1px solid #ededed;
+}

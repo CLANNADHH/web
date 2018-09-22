@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>夏随枫散尽</title>
+<title>玄虚烟</title>
 <meta name="Keywords" content="个人博客" >
 <meta name="Description" content="个人博客" >
 <link href="css/index.css" rel="stylesheet">
@@ -18,7 +18,8 @@
 <![endif]-->
 <script src="js/jquery-1.12.4.min.js"> </script>
 <script  src="js/index.js"></script>
-
+<script src="tinymce/js/tinymce/tinymce.min.js"></script>
+<script src="js/tinymce_setup.js"></script>
 
 <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
 </head>
@@ -26,7 +27,7 @@
 <figure><p><a href="javascript:;" class="register" >注册</a><a href="javascript:;" class="login">登录</a><a class="emails" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=HHh9cn95b3F1cHVye1xtbTJ-c3E" title="email"></a>
     <a class="rssdy" target="_blank" href="/e/web/?type=rss2"  title="rss订阅"></a><a class="fav" target="_blank" onClick="window.external.addFavorite('http://www.yangqq.com')" title="加入收藏"></a></p></figure>
 <header>
-  <h1><a href="/">夏随枫散尽</a></h1>
+  <h1><a href="/">玄虚烟</a></h1>
   <p>如果没有为陌上悄然伫立并为陌上风情所陶醉的人，那么花开也寂寞,风情也苍白...</p>
 </header>
 <!--nav begin-->
@@ -35,69 +36,50 @@
         <li><a href="/" >网站首页</a></li>
         <li><a href="/news/" target="_blank" title="慢生活">慢生活</a></li>
         <li><a href="/jstt/" target="_blank" title="技术探讨">技术探讨</a></li>
-        <li><a href="/download/" target="_blank" title="模板下载">模板下载</a></li>
+        <li><a href="/download/" target="_blank" title="模板下载">下载</a></li>
         <li><a href="/newstalk/" target="_blank" title="碎言碎语">碎言碎语</a></li>
-        <li><a href="/newshtml5/" target="_blank" title="HTML5业界">HTML5业界</a></li>
+        <li><a href="/newshtml5/" target="_blank" title="HTML5业界">(O_o)??</a></li>
         <li><a href="/news/case/" target="_blank" title="作品展示">作品展示</a></li>       
-        <li><a href="/news/jsex/" target="_blank" title="JS 实例代码演示">JS实例</a></li>
-       <li><a href="/e/tool/gbook/?bid=1" target="_blank" title="留言版">留言版</a></li>
+        <li><a href="/news/jsex/" target="_blank" title="JS 实例代码演示">啦啦</a></li>
+        <li><a href="javascript:;" target="_blank" title="留言版" class="message">留言版</a></li>
      </ul>
 </div>
 <!--nav end-->
 <div class="lace_hd_ft"></div>
 <article>  
 <div class="blog">
-      <h3><p>最新文章<span>New Blog</span></p></h3>
-  <div class="bloglist">
-   <h2><a href="/">女孩都有浪漫的小情怀</a></h2>
-     <p class="datetime">2013-5-20</p>
-     <ul class="topimg">
-      <img src="images/2011714152744924.jpg">
-     </ul>
-     <ul class="content">
-<p>女孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
-<p>you are the apple of my eyes.</p>
-<p>你是我这辈子最珍贵的人。请让我永远守护在你身边，我一定将你当成掌心的珍宝，一辈子悉心呵护。你，愿意嫁给我吗？</p>
-     </ul>
-   <p class="read"><a href="/">阅读>></a></p>
-   </div>   
- <div class="bloglist">
-   <h2><a href="/">女孩都有浪漫的小情怀</a></h2>
-     <p class="datetime">2013-5-20</p>
-     <ul class="topimg">
-      <img src="images/2011713203720633.jpg">
-     </ul>
-     <ul class="content">
-<p>女孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
-<p>you are the apple of my eyes.</p>
-<p>你是我这辈子最珍贵的人。请让我永远守护在你身边，我一定将你当成掌心的珍宝，一辈子悉心呵护。你，愿意嫁给我吗？</p>
-     </ul>
-   <p class="read"><a href="/">阅读>></a></p>
-   </div>     
-   <div class="bloglist">
-   <h2><a href="/">女孩都有浪漫的小情怀</a></h2>
-     <p class="datetime">2013-5-20</p>
-     <ul class="topimg">
-      <img src="images/2011713195450617.jpg">
-     </ul>
-     <ul class="content">
-<p>女孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
-<p>you are the apple of my eyes.</p>
-<p>你是我这辈子最珍贵的人。请让我永远守护在你身边，我一定将你当成掌心的珍宝，一辈子悉心呵护。你，愿意嫁给我吗？</p>
-     </ul>
-   <p class="read"><a href="/">阅读>></a></p>
-   </div> 
-      
+    <h3><p>最新文章<span>New Blog</span></p></h3>
+</div>
+<div id="editor">
+    <div class="editor_in">
+        <form class="release_form">
+        <h3>留言板</h3>
+
+        <div class="form-group">
+            <div class="fl"><input class="input_area" id="rich_content" name="content" value="哈哈"></input></div>
+        </div>
+        <div class="form-group">
+            <label>您的尊姓大名</label>
+           <input type="text" class="vip_name">
+           <input type="submit" value="提交" class="input_sub">
+        </div>
+        <!--<div class="error_tip2" >错误提示</div>-->
+        </form>
+    </div>
+
+</div>
+
+   </div>
 </div>    
-     
+
 <aside> 
-    <img src="images/about.png" class="about">
+    <img src="images/user_pic.jpg" class="about">
 <div class="vcard">
-      <p class="fn">姓名：</p>
-      <p class="nickname">网名：DanceSmile | 即步非烟</p>
-      <p class="url">主页：www.yangqq.com</p>
-      <p class="address">现居：天津市—滨海新区</p>
-      <p class="role">职业：网站设计、网站制作</p>
+      <p class="fn">姓名：不告诉你</p>
+      <p class="nickname">网名：</p>
+      <p class="url">主页：www.clannadhh.club</p>
+      <p class="address">现居：(⊙o⊙)…</p>
+      <p class="role">职业：苦逼程序员</p>
 </div>  
 <h2>博客分类</h2>
 <ul>
@@ -121,7 +103,7 @@
 </ul>
 <h2>友情链接</h2>
 <ul>
-  <li><a href="http://www.yangqq.com">个人博客</a></li>
+  <li><a href="https://blog.csdn.net/u013901768">个人博客</a></li>
 </ul>
 <!-- Baidu Button BEGIN -->
 <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare share">
@@ -141,6 +123,5 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 </article>
 <div class="blank"></div>
 <div id="copright">Design by DanceSmile</div>
-<script src="js/silder.js"></script>
 </body>
 </html>

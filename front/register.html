@@ -13,6 +13,8 @@
 <!-- css files -->
 <link href="css/register-style.css" rel='stylesheet' type='text/css' media="all" />
 <!-- /css files -->
+<script src="js/jquery-1.12.4.min.js"> </script>
+<script  src="js/register.js"></script>
 </head>
 <body>
 <h1>快乐肥宅</h1>
@@ -31,7 +33,7 @@
 	</div>
 	<div class="content2">
 		<h2>Join Us</h2>
-		<form>
+		<form class="register_form_con">
 			<input type="text" name="userid" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
 			<input type="tel" name="usrtel" value="手机号码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '手机号码';}">
 			<input type="sms" name="smscode" value="短信验证码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '短信验证码';}">
