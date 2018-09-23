@@ -2,10 +2,10 @@
 
 $(function () {
     $(".register").click(function () {
-        location.href = "http://127.0.0.1:8080/register.html"
+        location.href = "http://www.clannadhh.club/register.html"
     });
     $(".login").click(function () {
-        location.href = "http://127.0.0.1:8080/login.html"
+        location.href = "http://www.clannadhh.club/login.html"
     });
     $(".message").click(function () {
         $(".blog").css("display","none");
