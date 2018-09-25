@@ -25,7 +25,7 @@ class catch_news(object):
         news_dict = json.loads(news_dict)
         count = 0
         file_count = 0
-        with open("./news.list", 'w') as f:
+        with open("./news.txt", 'w') as f:
             for i in news_dict:
                 if i.get('c') is not None:
                     news_dict[count]['c'] = news_dict[i['c']]['n']
@@ -33,26 +33,24 @@ class catch_news(object):
                     if count > 8 and news_dict[count]['c'] != news_dict[count-1]['c']:
                         file_count = 0
                 if 1<= file_count <= 10:
-                    f.write(str(news_dict[count])+',\r\n')
+                    f.write(str(news_dict[count])+',\n')
                 count += 1
         return news_dict
 
     @staticmethod
     def parse_news():
         news_list = []
-        with open("news.list", 'r') as f:
+        with open("news.txt", 'r') as f:
             while True:
                 news = f.readline()
                 if news != '':
-                    news_list.append(news)
+                    temp = eval(news[0:-2])
+                    # temp = json.loads(temp)
+                    # print(type(temp))
+                    news_list.append(temp)
                 else:
                     break
-        json_str = json.dumps(news_list)
-        print(json_str)
-        result = json.loads(json_str)
-        print(result)
-        return result
-
+        return news_list
 
 if __name__ == "__main__":
     c = catch_news()
