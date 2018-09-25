@@ -105,7 +105,7 @@ function GetNewsList() {
     $.ajax({
 
         type:"get",
-        url:host + "/newslist/",
+        url:host + "newslist/",
         contentType: "application/json",
         // headers: {
         //     "X-CSRFToken": getCookie("csrf_token")
