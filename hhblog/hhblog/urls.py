@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^gallery/', include('gallery.urls')),
     url(r'^newslist/', include('news.urls')),
     # url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+
 ]
