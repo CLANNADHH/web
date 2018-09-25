@@ -103,7 +103,11 @@ input{
 #news_box h3 p{ background:#259CC7; width:180px; height:25px;  line-height:25px; height:25px; color:#fff; text-align:center; box-shadow: #999 4px 5px 1px;}
 #news_box h3 p span{ font-family: 'La Belle Aurore', cursive; padding-left:10px}
 #news_box li{line-height: 25px;font-size: 14px;}
-#news_box a:hover {text-decoration:underline; color: #00cc66}
+/*#news_box a:hover {text-decoration:underline; color: #00cc66}*/
+
+#news_box  a{ color:#333;-webkit-transition:all 1s;-moz-transition:all 1s;-o-transition:all 1s;-ms-transition:all 1s}
+#news_box  a:hover{ padding:0 0 0 20px; color:#00cc66 }
+
 
 
 .blog{ width:720px; float:left; padding-left:40px}

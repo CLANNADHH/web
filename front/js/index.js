@@ -1,8 +1,10 @@
 
+var host = "http://api.clannadhh.club:8000/"
+// var host = "http://127.0.0.1:8000/"
 
 $(function () {
     $(".register").click(function () {
-        location.href = "http://127.0.0.1:8080/register.html"
+        location.href = "http://www.clannadhh.club/register.html"
     });
     $(".login").click(function () {
         location.href = "http://www.clannadhh.club/login.html"
@@ -36,7 +38,7 @@ $(function () {
 function UpdateBlogListData() {
     $.ajax({
         type:"get",
-        url:"http://127.0.0.1:8000/blog/list",
+        url:host + "blog/list",
         contentType: "application/json",
         // headers: {
         //     "X-CSRFToken": getCookie("csrf_token")
@@ -71,7 +73,7 @@ function GetBlogData(pk) {
     $.ajax({
 
         type:"get",
-        url:"http://127.0.0.1:8000/blog/"+pk,
+        url:host + "blog/"+pk,
         contentType: "application/json",
         // headers: {
         //     "X-CSRFToken": getCookie("csrf_token")
@@ -103,7 +105,7 @@ function GetNewsList() {
     $.ajax({
 
         type:"get",
-        url:"http://127.0.0.1:8000/newslist/",
+        url:host + "/newslist/",
         contentType: "application/json",
         // headers: {
         //     "X-CSRFToken": getCookie("csrf_token")
@@ -128,22 +130,6 @@ function GetNewsList() {
                 category_count += 1;
                 $(".news_box_in").append(content);
             }
-
-
-
-            // $(".bloglist").remove();
-            // var content = '';
-            // console.log(data['content']);
-            // content += '<div class="bloglist">';
-            // content += '<h2> <a>'+ data['title'] + '</a></h2>';
-            // content += '<p class="datetime">' + data['pub_date']+'</p>';
-            // content += '<ul class="topimg">';
-            // // content += '<img src="images/2011714152744924.jpg">';
-            // content += '</ul>';
-            // content += '<ul class="content">';
-            // content += '<p>' + data['content'] + '</p>';
-            // content += '</ul>\n' + '<p class="read"><a href="/" >返回首页>></a></p></div>';
-            // $(".blog").append(content);
         }
         //添加请求成功之后返回的数据
     })

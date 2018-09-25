@@ -183,6 +183,6 @@ CKEDITOR_CONFIGS = {
 }
 
 CRONJOBS = [
-    # 每5分钟执行一次生成主页静态文件
+    # 每3分钟执行一次生成主页静态文件
     ('*/1 * * * *', 'news.crons.generate_news_file', '>>create')
 ]
