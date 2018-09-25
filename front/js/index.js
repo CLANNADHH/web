@@ -16,7 +16,7 @@ $(function () {
         $("#editor").css("display","none");
         $("#news_box").css("display","block");
         GetNewsList();
-    })
+    });
 
     //原因：新添加的结构是不能获取事件，必须通过父级去完成事件。
     //假如父级也是动态添加，那就要一层一层的网上找。建议直接写body就行了
@@ -36,7 +36,7 @@ $(function () {
 function UpdateBlogListData() {
     $.ajax({
         type:"get",
-        url:"http://api.clannadhh.club:8000/blog/list",
+        url:"http://127.0.0.1:8000/blog/list",
         contentType: "application/json",
         // headers: {
         //     "X-CSRFToken": getCookie("csrf_token")
@@ -71,7 +71,7 @@ function GetBlogData(pk) {
     $.ajax({
 
         type:"get",
-        url:"http://api.clannadhh.club:8000/blog/"+pk,
+        url:"http://127.0.0.1:8000/blog/"+pk,
         contentType: "application/json",
         // headers: {
         //     "X-CSRFToken": getCookie("csrf_token")
@@ -99,18 +99,38 @@ function GetBlogData(pk) {
 
 
 function GetNewsList() {
-    console.log();
+
     $.ajax({
 
         type:"get",
-        url:"http://api.clannadhh.club:8000/newslist/",
+        url:"http://127.0.0.1:8000/newslist/",
         contentType: "application/json",
         // headers: {
         //     "X-CSRFToken": getCookie("csrf_token")
         // },
     })
     .done(function(data){
+        console.log(data)
         if (data != null) {
+            var category_count = 0;
+            for(var i=0;i<data.length;i++) {
+
+                var content = '';
+                var news = data[i];
+                if(category_count%10 == 0){
+                    content += '<hr>'
+                }
+                content += "<li><span>";
+                content += '[' + news['c'] + ']</span><span class="time_right">';
+                content += news['p']+ '</span>';
+                content += "</span><a href="+ news['l'] +">" + news['t'];
+                content += '</li>';
+                category_count += 1;
+                $(".news_box_in").append(content);
+            }
+
+
+
             // $(".bloglist").remove();
             // var content = '';
             // console.log(data['content']);

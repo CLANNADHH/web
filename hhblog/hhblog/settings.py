@@ -34,11 +34,11 @@ AUTH_USER_MODEL = 'users.User'
 # Application definition
 
 # CORS
-CORS_ORIGIN_WHITELIST = (
-    '127.0.0.1:8080',
-    'localhost:8080',
-)
-CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
+# CORS_ORIGIN_WHITELIST = (
+#     '127.0.0.1:8080',
+#     'localhost:8080',
+# )
+# CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,15 +46,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 注册django rest framework
-    'rest_framework',
+    'rest_framework',  # 注册django rest framework
     'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
-    # 跨域请求
-    'corsheaders',
+    'corsheaders',  # 跨域请求
     'imagekit',
     'gallery.apps.GalleryConfig',
     'ckeditor',  # 富文本编辑器
+    'news.apps.NewsConfig',
+    'django_crontab',  # 定时任务
 ]
 
 MIDDLEWARE = [
@@ -181,3 +181,8 @@ CKEDITOR_CONFIGS = {
         # 'width': 300,  # 编辑器宽
     },
 }
+
+CRONJOBS = [
+    # 每5分钟执行一次生成主页静态文件
+    ('*/1 * * * *', 'news.crons.generate_news_file', '>>create')
+]

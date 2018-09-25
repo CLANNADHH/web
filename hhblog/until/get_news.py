@@ -3,15 +3,21 @@ import random
 import json
 import re
 
+from hhblog.settings import MEDIA_ROOT
+
 
 class catch_news(object):
-    def __init__(self):
+    def __init__(self,path=None):
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3\
             497.100 Safari/537.36',
             'Host': 'news.163.com',
         }
         self.url = "http://news.163.com/special/0001220O/news_json.js?"
+        if path:
+            self.file_path = MEDIA_ROOT + '/news.txt'
+        else:
+            self.file_path = './news.txt'
 
     def send_request(self):
         response = requests.get(self.url+str(random.random()),headers=self.headers)
@@ -25,7 +31,8 @@ class catch_news(object):
         news_dict = json.loads(news_dict)
         count = 0
         file_count = 0
-        with open("./news.txt", 'w') as f:
+
+        with open(self.file_path, 'w') as f:
             for i in news_dict:
                 if i.get('c') is not None:
                     news_dict[count]['c'] = news_dict[i['c']]['n']
@@ -37,10 +44,10 @@ class catch_news(object):
                 count += 1
         return news_dict
 
-    @staticmethod
-    def parse_news():
+
+    def parse_news(self):
         news_list = []
-        with open("news.txt", 'r') as f:
+        with open(self.file_path, 'r') as f:
             while True:
                 news = f.readline()
                 if news != '':
@@ -53,7 +60,7 @@ class catch_news(object):
         return news_list
 
 if __name__ == "__main__":
-    c = catch_news()
+    c = catch_news(1)
     c.send_request()
     # print(c.parse_news()
     c.parse_news()
