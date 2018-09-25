@@ -262,7 +262,7 @@ h1 {
 	font-family: 'Muli', sans-serif;
 	border-radius: 4px;
 }
-.sendsms {
+#sendsms {
 	padding:10px;
 	background-color:#4C9A39;
 	width:35%;
@@ -279,7 +279,7 @@ h1 {
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 }
-.sendsms:hover {
+#sendsms:hover {
 	background-color:#376D29;
 	color:white;
 }
@@ -310,7 +310,7 @@ h1 {
 	font-family: 'Muli', sans-serif;
 	border-radius: 4px;
 }
-.register {
+#register {
 	padding:10px;
 	background-color:#4C9A39;
 	width:78%;
@@ -327,7 +327,7 @@ h1 {
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 }
-.register:hover {
+#register:hover {
 	background-color:#376D29;
 	color:white;
 }
@@ -500,7 +500,7 @@ h1 {
 	.reset {
 	margin-right:49px;
 }
-	.register {
+	#register {
 	width:395px;
 }
 }
@@ -533,7 +533,7 @@ h1 {
 	.reset {
 	margin-right:43px;
 }
-	.register {
+	#register {
     width: 373px;
 }
 }
@@ -572,7 +572,7 @@ h1 {
 	.log .content1 h2 , .log .content2 h2 {
     font-size: 35px;
 	}
-	.register {
+	#register {
     width: 320px;
 }
 }
@@ -599,7 +599,7 @@ h1 {
 	.content2 input[type="password"] {
     background: url(../images/lock.png) no-repeat 280px 10px;
 	}
-	.register {
+	#register {
     width: 315px;
 }
 }
@@ -635,7 +635,7 @@ h1 {
 	.button-row {
 	padding:25px 0;	
 	}
-	.register {
+	#register {
     width: 304px;
 	}
 	.log .content1 h2, .log .content2 h2 {
@@ -666,7 +666,7 @@ h1 {
 	.content2 input[type="password"] {
     background: url(../images/lock.png) no-repeat 260px 10px;
 	}
-	.register {
+	#register {
     width: 295px;
 }
 }
@@ -693,7 +693,7 @@ h1 {
 	.content2 input[type="password"] {
     background: url(../images/lock.png) no-repeat 240px 10px;
 	}
-	.register {
+	#register {
     width: 274px;
 	}
 	.button-row {
@@ -794,7 +794,7 @@ h1 {
     background: url(../images/lock.png) no-repeat 240px 10px;
 	background-size: 7% 50%;
 	}
-	.register {
+	#register {
     width: 270px;
 	font-size: 16px;
 	}
@@ -860,7 +860,7 @@ h1 {
 	.reset {
     margin-right: 43px;
 	}
-	.register {
+	#register {
     width: 370px;
 	}
 }
@@ -920,7 +920,7 @@ h1 {
 	.reset {
     margin-right:41px;
 	}	
-	.register{
+	#register{
 	width:82%;
 	}
 }
@@ -1007,7 +1007,7 @@ h1 {
 .reset {
     margin-right: 33px;
 }
-.register {
+#register {
     width: 83%;
 }
 }
@@ -1071,7 +1071,7 @@ h1 {
 .reset {
     margin-right: 22px;
 }
-.register {
+#register {
     width: 86%;
 }
 }
@@ -1083,7 +1083,7 @@ h1 {
 .reset {
     margin-right: 19px;
 }
-.register {
+#register {
     width: 87%;
 }
 }
@@ -1161,5 +1161,29 @@ h1 {
     font-size: 14px;
 }
 }
+.noerror::-webkit-input-placeholder {
+    color: #fffacd;
+    font-size: 20px;
+}
+.noerror:-moz-placeholder {
+    color: #fffacd;
+    font-size: 20px;
+}
+.noerror:-ms-input-placeholder {
+    color: #fffacd;
+    font-size: 20px;
+}
 
+.errinput::-webkit-input-placeholder {
+    color: red;
+    font-size: 20px;
+}
+.errinput:-moz-placeholder {
+    color: red;
+    font-size: 20px;
+}
+.errinput:-ms-input-placeholder {
+    color: red;
+    font-size: 20px;
+}
 	

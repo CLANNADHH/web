@@ -34,19 +34,19 @@
 	<div class="content2">
 		<h2>Join Us</h2>
 		<form class="register_form_con">
-			<input type="text" name="userid" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
-			<input type="tel" name="usrtel" value="手机号码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '手机号码';}">
-			<input type="sms" name="smscode" value="短信验证码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '短信验证码';}">
-            <button type='sendsms' name='send' class='sendsms'>发送</button>
-			<input type="email" name="email" value="邮箱地址" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '邮箱地址';}">
-			<input type="password" name="psw" value="PASSWORD" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'PASSWORD';}">
-			<input type="submit" class="register" value="点击注册">
+			<input type="text" id="username" class="noerror" name="userid" placeholder="用户名" >
+			<input type="tel" class="noerror" name="usrtel" placeholder="手机号码" >
+			<input type="sms" class="noerror" name="smscode" placeholder="短信验证码" >
+            <button type='sendsms' class="noerror" name='send' id='sendsms'>发送</button>
+			<input type="email" class="noerror" name="email" placeholder="邮箱地址" >
+			<input type="password" class="noerror" name="psw" placeholder="密码" >
+			<input type="submit" id="register" class="noerror" placeholder="点击注册">
 		</form>
 	</div>
 	<div class="clear"></div>
 </div>
 <div class="footer">
-	<p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="#" target="_blank" title="">clannadhh</a> </p>
+	<p>Copyright &copy; 2018.Company name All rights reserved.More Templates <a href="#" target="_blank" title="">clannadhh</a> </p>
 </div>
 
 </body>
