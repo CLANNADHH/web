@@ -2,7 +2,7 @@ import requests
 import random
 import json
 import re
-from retry import retry
+# from retry import retry
 from hhblog.settings import MEDIA_ROOT
 
 
@@ -19,7 +19,7 @@ class CatchNews(object):
         else:
             self.file_path = './news.txt'
 
-    @retry(tries=3)
+    # @retry(tries=3)
     def send_request(self):
         response = requests.get(self.url+str(random.random()),headers=self.headers)
         # response = requests.get(self.url+'0.9732076378302217',headers=self.headers)
