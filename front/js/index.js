@@ -1,6 +1,6 @@
 
-var host = "http://api.clannadhh.club:8000/"
-// var host = "http://127.0.0.1:8000/"
+var host = "http://api.clannadhh.club:8000/";
+// var host = "http://127.0.0.1:8000/";
 
 $(function () {
     $(".register").click(function () {
@@ -19,7 +19,9 @@ $(function () {
         $("#news_box").css("display","block");
         GetNewsList();
     });
-
+    $(".news_refresh").click(function () {
+        GenerNewsFile()
+    });
     //原因：新添加的结构是不能获取事件，必须通过父级去完成事件。
     //假如父级也是动态添加，那就要一层一层的网上找。建议直接写body就行了
     $('body').delegate('.read_blog','click',function(){
@@ -99,6 +101,18 @@ function GetBlogData(pk) {
     })
 }
 
+function GenerNewsFile() {
+    $.ajax({
+
+        type:"get",
+        url:host + "newslist/create/",
+        contentType: "application/json",
+    })
+    .done(function(data){
+        GetNewsList()
+    })
+}
+
 
 function GetNewsList() {
 
@@ -114,6 +128,8 @@ function GetNewsList() {
     .done(function(data){
         console.log(data)
         if (data != null) {
+            // 清除 div内容
+            $(".news_box_in").empty();
             var category_count = 0;
             for(var i=0;i<data.length;i++) {
 

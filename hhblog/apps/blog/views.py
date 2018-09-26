@@ -22,7 +22,8 @@ from blog.serializers import Blogserializer
 class BlogListView(ListModelMixin, GenericAPIView):
 
     # 限制查询集的个数
-    queryset = MyBlog.objects.all()[0:6]
+    # queryset = MyBlog.objects.all()[0:6]
+    queryset = MyBlog.objects.filter(id__lte=6)
     serializer_class = Blogserializer
 
     def get(self,request):
