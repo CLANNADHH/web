@@ -148,3 +148,26 @@ aside ul li a:hover{ padding-left:20px }
     color: #9698a5;
     border-bottom:1px solid #ededed;
 }
+
+#tagsList {
+	position: relative;
+	width: 450px;
+	height: 450px;
+	margin: 150px auto 0;
+    float: left;
+    display: none;
+}
+#tagsList a {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-family: Microsoft YaHei;
+	color: #06C;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 3px 6px;
+}
+#tagsList a:hover {
+	color: #FF0000;
+	letter-spacing: 2px;
+}

@@ -1,6 +1,6 @@
 
-var host = "http://api.clannadhh.club:8000/";
-// var host = "http://127.0.0.1:8000/";
+// var host = "http://api.clannadhh.club:8000/";
+var host = "http://127.0.0.1:8000/";
 
 $(function () {
     $(".register").click(function () {
@@ -11,16 +11,26 @@ $(function () {
     });
     $(".message").click(function () {
         $(".blog").css("display","none");
-        $("#editor").css("display","block")
+        $("#news_box").css("display","none");
+        $("#editor").css("display","block");
+        $("#tagsList").css("display","none");
     });
     $(".newslist").click(function () {
         $(".blog").css("display","none");
         $("#editor").css("display","none");
         $("#news_box").css("display","block");
+        $("#tagsList").css("display","none");
         GetNewsList();
     });
     $(".news_refresh").click(function () {
         GenerNewsFile()
+    });
+    $(".tagslink").click(function () {
+        // alert(123);
+        $(".blog").css("display","none");
+        $("#editor").css("display","none");
+        $("#news_box").css("display","none");
+        $("#tagsList").css("display","block");
     });
     //原因：新添加的结构是不能获取事件，必须通过父级去完成事件。
     //假如父级也是动态添加，那就要一层一层的网上找。建议直接写body就行了

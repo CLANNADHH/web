@@ -17,6 +17,7 @@ class Album(models.Model):
     # slug = models.SlugField(max_length=50, blank=True)
     class Meta():
         verbose_name = '图片'
+        verbose_name_plural = verbose_name
     def get_absolute_url(self):
 
         return reverse('gallery:album_detail', kwargs={'pk': self.pk, 'slug': self.slug})

@@ -65,7 +65,6 @@ class CatchNews(object):
             return []
         return news_list
 
-
 if __name__ == "__main__":
     c = CatchNews(1)
     c.send_request()
