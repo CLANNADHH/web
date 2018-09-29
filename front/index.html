@@ -5,6 +5,8 @@
 <meta name="Keywords" content="个人博客" >
 <meta name="Description" content="个人博客" >
 <link href="css/index.css" rel="stylesheet">
+<script src="js/jquery-1.12.4.min.js"> </script>
+<script type="text/javascript" src="js/jquery.form.min.js"></script>
 <!--[if lt IE 9]>
 
 <script src="js/modernizr.js"></script>
@@ -16,7 +18,7 @@
  </script>
 
 <![endif]-->
-<script src="js/jquery-1.12.4.min.js"> </script>
+
 <script src="js/index.js"></script>
 <script src="tinymce/js/tinymce/tinymce.min.js"></script>
 <script src="js/tinymce_setup.js"></script>
@@ -31,6 +33,7 @@
   <h1><a href="/">玄虚烟</a></h1>
   <p>如果没有为陌上悄然伫立并为陌上风情所陶醉的人，那么花开也寂寞,风情也苍白...</p>
 </header>
+
 <!--nav begin-->
 <div id="nav">
 <ul>
@@ -63,7 +66,7 @@
         </div>
         <div class="form-group">
             <label>您的尊姓大名</label>
-           <input type="text" class="vip_name">
+           <input type="text" class="vip_name" name="vip_name">
            <input type="submit" value="提交" class="input_sub">
         </div>
         <!--<div class="error_tip2" >错误提示</div>-->

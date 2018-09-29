@@ -1,7 +1,10 @@
 
 // var host = "http://api.clannadhh.club:8000/";
 var host = "http://127.0.0.1:8000/";
-
+function getCookie(name) {
+    var r = document.cookie.match("\\b" + name + "=([^;]*)\\b");
+    return r ? r[1] : undefined;
+}
 $(function () {
     $(".register").click(function () {
         location.href = "http://www.clannadhh.club/register.html"
@@ -31,6 +34,21 @@ $(function () {
         $("#editor").css("display","none");
         $("#news_box").css("display","none");
         $("#tagsList").css("display","block");
+    });
+    //留言板
+    $('.release_form').submit(function (e) {
+        e.preventDefault();
+        $(this).ajaxSubmit({
+            type:"post",
+            url:host+"message/",
+            headers: {
+                "X-CSRFToken": getCookie("csrf_token")
+            },
+            success:function(resp) {
+                alert("提交成功")
+            }
+        })
+
     });
     //原因：新添加的结构是不能获取事件，必须通过父级去完成事件。
     //假如父级也是动态添加，那就要一层一层的网上找。建议直接写body就行了
@@ -131,9 +149,9 @@ function GetNewsList() {
         type:"get",
         url:host + "newslist/",
         contentType: "application/json",
-        // headers: {
-        //     "X-CSRFToken": getCookie("csrf_token")
-        // },
+        headers: {
+            "X-CSRFToken": getCookie("csrf_token")
+        },
     })
     .done(function(data){
         console.log(data)
@@ -159,4 +177,4 @@ function GetNewsList() {
         }
         //添加请求成功之后返回的数据
     })
-}
+};
