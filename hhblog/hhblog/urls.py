@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^newslist/', include('news.urls')),
     # url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^message/', include('message.urls')),
+    url(r'^users/',include('users.urls')),
 
 ]

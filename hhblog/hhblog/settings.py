@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'ckeditor',  # 富文本编辑器
     'news.apps.NewsConfig',
     'django_crontab',  # 定时任务
+    'message.apps.MessageConfig',
 ]
 
 MIDDLEWARE = [
@@ -139,7 +140,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 # CORS
 CORS_ORIGIN_WHITELIST = (
@@ -187,3 +188,17 @@ CRONJOBS = [
     # 每3分钟执行一次生成主页静态文件
     ('*/1 * * * *', 'news.crons.generate_news_file', '>>create')
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+
+import datetime
+
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
+}

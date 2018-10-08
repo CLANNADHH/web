@@ -6,11 +6,15 @@ function getCookie(name) {
     return r ? r[1] : undefined;
 }
 $(function () {
+    username = sessionStorage.username || localStorage.username;
+    user_id = sessionStorage.user_id || localStorage.user_id;
+    token = sessionStorage.token || localStorage.token;
+    console.log(username)
     $(".register").click(function () {
-        location.href = "http://www.clannadhh.club/register.html"
+        location.href = "register.html"
     });
     $(".login").click(function () {
-        location.href = "http://www.clannadhh.club/login.html"
+        location.href = "login.html"
     });
     $(".message").click(function () {
         $(".blog").css("display","none");
